@@ -67,14 +67,7 @@ namespace CharacterConverter
                 output += TranslateCharacter(chr, CurrentTranslationMode);
                 output += separator;
             }
-            if(separator.Length > 0)
-            {
-                OutputText.Text = output.Substring(0, output.Length - 1);
-            }
-            else
-            {
-                OutputText.Text = output;
-            }
+            OutputText.Text = output.Substring(0, output.Length - separator.Length);
         }
 
         private void InputText_TextChanged(object sender, EventArgs e)
